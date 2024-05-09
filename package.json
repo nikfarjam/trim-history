@@ -1,0 +1,50 @@
+{
+  "name": "trim-history",
+  "version": "1.0.0",
+  "description": "A toolkit to trim bash history",
+  "main": "app.js",
+  "scripts": {
+    "compile": "npx tsc",
+    "watch": "npx tsc -w",
+    "lint": "npx eslint src/**/*",
+    "start": "node -r ts-node/register --env-file=config.env ./src/app/App.ts",
+    "test": "jest --config jest.config.ts",
+    "test-integration": "jest --config itest.config.ts",
+    "test-watch": "jest --watch --config jest.config.ts",
+    "build": "mkdir -p dist && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikfarjam/trim-history.git"
+  },
+  "keywords": [
+    "bash",
+    "history",
+    "toolkit"
+  ],
+  "author": "Nikfarjam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikfarjam/trim-history/issues"
+  },
+  "homepage": "https://github.com/nikfarjam/trim-history#readme",
+  "devDependencies": {"@types/debug": "^4.1.12",
+  "@types/jest": "^29.5.12",
+  "@types/node": "^20.11.17",
+  "@types/webpack": "^5.28.5",
+  "@typescript-eslint/eslint-plugin": "^7.0.1",
+  "@typescript-eslint/parser": "^7.0.1",
+  "eslint": "^8.56.0",
+  "jest": "^29.7.0",
+  "ts-jest": "^29.1.2",
+  "ts-loader": "^9.5.1",
+  "ts-node": "^10.9.2",
+  "typescript": "^5.3.3",
+  "typescript-eslint": "^7.0.1",
+  "webpack": "^5.90.3",
+  "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "debug": "^4.3.4"
+  }
+}
