@@ -1,4 +1,4 @@
-import { appendFile } from "fs";
+import { showErrorMessage } from "./Console";
 
 class App {
 
@@ -12,6 +12,9 @@ try {
     app.run();
 } catch (err) {
     if (err instanceof Error) {
+        showErrorMessage(err.message);
+    } else {
+        showErrorMessage('General error');
     }
 }
 
